@@ -1,11 +1,15 @@
 package com.minecolonies.coremod.colony.jobs;
 
+import com.minecolonies.api.client.render.modeltype.BipedModelType;
+import com.minecolonies.api.client.render.modeltype.IModelType;
 import com.minecolonies.api.colony.ICitizenData;
 import com.minecolonies.api.colony.jobs.ModJobs;
 import com.minecolonies.api.colony.jobs.registry.JobEntry;
 import com.minecolonies.coremod.entity.ai.citizen.druid.EntityAIDruid;
 
-//TODO
+/**
+ * The druid job class.
+ */
 public class JobDruid extends AbstractJob<EntityAIDruid, JobDruid>
 {
     public JobDruid(final ICitizenData citizen)
@@ -32,7 +36,7 @@ public class JobDruid extends AbstractJob<EntityAIDruid, JobDruid>
     @Override
     public String getName()
     {
-        return null;
+        return "com.minecolonies.coremod.job.druid";
     }
 
     /**
@@ -47,5 +51,11 @@ public class JobDruid extends AbstractJob<EntityAIDruid, JobDruid>
     public EntityAIDruid generateAI()
     {
         return new EntityAIDruid(this);
+    }
+
+    @Override
+    public IModelType getModel()
+    {
+        return BipedModelType.DRUID;
     }
 }

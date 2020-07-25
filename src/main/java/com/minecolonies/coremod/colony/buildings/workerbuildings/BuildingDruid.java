@@ -18,6 +18,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class BuildingDruid extends AbstractBuildingWorker
 {
+    private static final String DRUID = "druid";
     /**
      * The abstract constructor of the building.
      *
@@ -51,7 +52,7 @@ public class BuildingDruid extends AbstractBuildingWorker
     @Override
     public String getJobName()
     {
-        return "druid";
+        return DRUID;
     }
 
     /**
@@ -63,7 +64,7 @@ public class BuildingDruid extends AbstractBuildingWorker
     @Override
     public Skill getPrimarySkill()
     {
-        return null; //TODO
+        return Skill.Mana;
     }
 
     /**
@@ -75,7 +76,7 @@ public class BuildingDruid extends AbstractBuildingWorker
     @Override
     public Skill getSecondarySkill()
     {
-        return null;//TODO
+        return Skill.Creativity;
     }
 
     @Override
@@ -92,7 +93,7 @@ public class BuildingDruid extends AbstractBuildingWorker
     @Override
     public String getSchematicName()
     {
-        return null;
+        return DRUID;
     }
 
     /**

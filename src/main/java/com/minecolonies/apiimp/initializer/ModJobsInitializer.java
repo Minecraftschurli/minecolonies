@@ -219,6 +219,11 @@ public final class ModJobsInitializer
                               .setRegistryName(ModJobs.BEEKEEPER_ID)
                               .createJobEntry();
 
+        ModJobs.druid = new JobEntry.Builder()
+                          .setJobProducer(JobDruid::new)
+                          .setRegistryName(ModJobs.DRUID_ID)
+                          .createJobEntry();
+
         reg.register(ModJobs.placeHolder);
         reg.register(ModJobs.builder);
         reg.register(ModJobs.delivery);
@@ -259,5 +264,6 @@ public final class ModJobsInitializer
         reg.register(ModJobs.concreteMixer);
         reg.register(ModJobs.rabbitHerder);
         reg.register(ModJobs.beekeeper);
+        reg.register(ModJobs.druid);
     }
 }
