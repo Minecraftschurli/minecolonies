@@ -84,6 +84,7 @@ public final class ModBlocksInitializer
         ModBlocks.blockHutRabbitHutch = new BlockHutRabbitHutch().registerBlock(registry);
         ModBlocks.blockHutConcreteMixer = new BlockHutConcreteMixer().registerBlock(registry);
         ModBlocks.blockHutBeekeeper = new BlockHutBeekeeper().registerBlock(registry);
+        ModBlocks.blockHutDruid = new BlockHutDruid().registerBlock(registry);
 
         ModBlocks.blockConstructionTape = new BlockConstructionTape().registerBlock(registry);
         ModBlocks.blockBarracksTowerSubstitution = new BlockBarracksTowerSubstitution().registerBlock(registry);
